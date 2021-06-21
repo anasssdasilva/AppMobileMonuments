@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;font-family: 'Lucida Sans';">Monuments de Chaque Ville</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [scrollEvents]="true">
+<ion-list *ngFor="let ville of villes">
+
+  <ion-item>
+    <h2>{{ ville.ville }}</h2>
+	  <ion-button (click)="anassfiltrer( ville.ville )">SHOW LIST OF MONUMENTS BY CITY</ion-button>
+  </ion-item>
+
+
+	    
+
+	
+
+
+</ion-list>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;font-family: 'Lucida Sans';">Créer un compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_OUtLo8.json"  background="transparent"  speed="1"  style=" height: 300px;"  loop autoplay></lottie-player>
+  
+  <form>    
+    <ion-item lines="full">
+      <ion-label position="floating">Email : </ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item> 
+
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe :</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col> 
+      <ion-button type="submit" (click)="signUp(email, password)" expand="block">Créer</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

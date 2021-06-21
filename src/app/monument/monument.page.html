@@ -1,0 +1,49 @@
+
+<!-- home.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-title style="text-align: center;font-family: 'Lucida Sans';">
+      Les Monuments
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)" color="primary">
+          <ion-slide *ngFor="let monument of monuments" color="primary">
+		  <ion-item>
+
+
+      <h2>{{ monument.nom }}</h2>
+						</ion-item>
+			
+									
+
+          </ion-slide>
+        </ion-slides>
+		
+		
+		
+		<ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+          (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+          <ion-slide *ngFor="let monument of monuments">
+		  
+			<ion-item>
+			<img src="assets/images/{{monument.img}}"/>
+			</ion-item>
+									
+
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  </ion-content>

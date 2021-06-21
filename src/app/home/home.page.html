@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;font-family: 'Lucida Sans';">
+      Monuments Historiques
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+	<ion-item>
+			<img src="assets/images/fondecran.jpg"/>
+			</ion-item>
+      <ion-col class="ion-align-self-center">
+        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Créer un Compte</ion-button>
+        <span class="divider line one-line"></span>
+        <span class="already">Vous avez déjà un compte?</span>
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Se Connecter</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
